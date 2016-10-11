@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Submitting data to the TaRGET DCC &mdash; submissionUI 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="submissionUI 1.0 documentation" href="index.html" />
+    <link rel="next" title="Report an issue" href="issues.html" />
+    <link rel="prev" title="Introduction" href="intro.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="submitting-data-to-the-target-dcc">
+<h1>Submitting data to the TaRGET DCC<a class="headerlink" href="#submitting-data-to-the-target-dcc" title="Permalink to this headline">¶</a></h1>
+<ol class="arabic">
+<li><p class="first">Log in to the Submission Pipeline (<a class="reference external" href="http://submit.target.wustl.edu/">http://submit.target.wustl.edu/</a>)</p>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li>On your first login, you will need to register as a new user (“Create New Account”). After completing all fields, select “Create”, then “Login”. If you have a consortium wiki account, you should use the same username and email for this account.</li>
+<li>The home screen lists your registered Experiments (an organizational unit that allows you to group together related files for upload) and allows creation of new Experiments.</li>
+</ol>
+<img alt="_images/t1.png" src="_images/t1.png" />
+</div></blockquote>
+</li>
+<li><p class="first">Register metadata for the submission</p>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li>Before data submission, you must fill out several pieces of information about the experiment from which the files were generated (e.g., how the mouse was treated, how the assay was performed). Click on “Register Metadata” to go to the Accession Registry (<a class="reference external" href="http://meta.target.wustl.edu">http://meta.target.wustl.edu</a>).</li>
+</ol>
+<img alt="_images/t2.png" src="_images/t2.png" />
+<ol class="loweralpha simple" start="2">
+<li>The metadata is organized into discrete categories (such as Donor, Assay, Antibody) that are linked together. The entity relationship diagram on the home page displays the relationships between the metadata categories. Some categories will have only one or a few unique instances per lab (e.g., Bioproject), while others (e.g., Donor) will have many. By storing metadata as unique objects, we can avoid entering redundant data (e.g., multiple mice may link to the same Diet and Treatment).</li>
+<li>Fill out metadata for the experiment by clicking on the metadata objects listed under “Other Metadata” (e.g., “Donor” for individual mice, “Assays” for experimental assays performed on nucleic acid obtained from a treated mouse).</li>
+</ol>
+<img alt="_images/t3.png" src="_images/t3.png" />
+<ol class="loweralpha simple" start="4">
+<li>To create a new metadata object, fill out all of the required fields under “Create a new __”. Some fields will include a description or a drop-down menu of available terms. After you submit the object (“Create”), a notification will appear that the object was successfully created, and its randomly generated, permanent accession number will become available in the list of current objects.</li>
+</ol>
+<img alt="_images/t4.png" src="_images/t4.png" />
+<ol class="loweralpha simple" start="5">
+<li>To view the details of a metadata object, select the accession number for that object. If an object has already been registered, you do not need to register it again; however, you should check to make sure that&nbsp;all&nbsp;of the fields match your submission.</li>
+</ol>
+<img alt="_images/t5.png" src="_images/t5.png" />
+<ol class="loweralpha simple" start="6">
+<li>To edit a metadata object, alter the relevant fields, and select &#8220;Save changes&#8221;.</li>
+<li>To link a metadata object to another metadata object (e.g., associate a Donor mouse with its Treatment or Diet), select the object from the drop down menu and select &#8220;Add&#8221;. Links can also be deleted without deleting the object (“X”).</li>
+<li>To delete a metadata object, select &#8220;Delete _&#8221;. All links between the object and other objects must be deleted before the object can be deleted.</li>
+</ol>
+</div></blockquote>
+</li>
+<li><p class="first">Add a new experiment</p>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li>Return to the Submission Interface and select “Add new experiment”. This will take you to the “Experiments” section of the Accession Registry, where you can enter a description for the group of files you are submitting. After filling in the fields, select “Create”.</li>
+</ol>
+<img alt="_images/t6.png" src="_images/t6.png" />
+<img alt="_images/t7.png" src="_images/t7.png" />
+<ol class="loweralpha simple" start="2">
+<li>As with other metadata objects, an Experiment can be edited, deleted, or linked to a Bioproject by selecting the accession number of that Experiment.</li>
+<li>Once created, the Experiment accession will be visible in the list of your current Experiments on the Submission Interface.</li>
+</ol>
+</div></blockquote>
+</li>
+<li><p class="first">Register files for submission</p>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li>Return to the Submission Interface (submit.target.wustl.edu/experiments) and select “View Details” for the Experiment for which you are submitting data. This will display a list of files currently associated with the Experiment. Then, select “Register metadata to add new files to this experiment”.</li>
+</ol>
+<img alt="_images/t8.png" src="_images/t8.png" />
+<ol class="loweralpha simple" start="2">
+<li>You will be redirected to the “Files” tab in the Accession Registry (meta.target.wustl.edu/files), where you should register metadata for each data file you are submitting. Submitted files must be in fastq format and unzipped or in .gz zipped format. You must generate an md5sum for each file before registering it, which will be used to ensure that the file was completely uploaded.</li>
+<li>After creating the file accession, link it to the relevant Experiment by selecting from the drop-down menu under “Add an experiment associated with this file:”.</li>
+</ol>
+<img alt="_images/t9.png" src="_images/t9.png" />
+<ol class="loweralpha simple" start="4">
+<li>Once created and linked to an Experiment, the file will be visible on your Submission Interface in the list of files under the experiment you selected, with Upload Status “not uploaded”.</li>
+</ol>
+<img alt="_images/t10.png" src="_images/t10.png" />
+</div></blockquote>
+</li>
+<li><p class="first">Upload data</p>
+<blockquote>
+<div><ol class="loweralpha">
+<li><p class="first">Select the green button labeled “Upload Data” to upload files via a web interface.</p>
+<blockquote>
+<div><ol class="lowerroman simple">
+<li>You will be directed to the TaRGET DCC Aspera server. The first time you do this, you will be required to download Aspera to your computer. There is no cost to the user.</li>
+<li>Create a New Folder whose name is the token generated for your Experiment.</li>
+<li>Upload files to that Experiment.</li>
+</ol>
+</div></blockquote>
+</li>
+</ol>
+<img alt="_images/t11.png" src="_images/t11.png" />
+<ol class="loweralpha simple" start="2">
+<li>Alternatively, select “Click here” for instructions on upload via command line.</li>
+<li>After uploading files, refresh the page listing files under your experiment. You should see that the Upload Status has changed to “uploaded”. If the size or md5sum do not match, the Validation Status will be “error”. You must re-upload the file in that case.</li>
+</ol>
+<img alt="_images/t12.png" src="_images/t12.png" />
+<ol class="loweralpha simple" start="4">
+<li>A validation script will be automatically run on the files to ensure that they are in the correct format. If the files pass validation, the Validation Status will read “valid”. If not, it will be “invalid”. In that case, please check to ensure that you have submitting valid fastq files.</li>
+</ol>
+</div></blockquote>
+</li>
+</ol>
+<p>Thank you for using the TaRGET DCC submission pipeline! Please contact us with any questions.</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="intro.html" title="previous chapter">Introduction</a></li>
+      <li>Next: <a href="issues.html" title="next chapter">Report an issue</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/tutorial.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, Erica, Deepak, Daofeng, Ting.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.7</a>
+      
+      |
+      <a href="_sources/tutorial.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -17,14 +17,13 @@ Steps for uploading Metadata using Bulk upload
 
     d. Fill in the excel template.
 
+    https://www.youtube.com/watch?v=_MZUw_JEqK0
 
 3.  Run the following command on terminal
     .. code-block:: python
 
        python3 submission.py -t V2 -x <path to excel file>
-       https://www.youtube.com/watch?v=_MZUw_JEqK0
-
-
+       
 4.  Video tutorial to get started
 
     .. youtube:: https://www.youtube.com/watch?v=_MZUw_JEqK0

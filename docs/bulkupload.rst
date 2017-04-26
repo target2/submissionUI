@@ -19,8 +19,9 @@ Steps for uploading Metadata using Bulk upload
 
     e. Run the following command on terminal
     .. code-block:: python
+
        python3 submission.py -t V2 -x <path to excel file>
 
-     Video tutorial to get started
+   f. Video tutorial to get started
 
-     .. youtube:: https://www.youtube.com/watch?v=_MZUw_JEqK0
+   .. youtube:: https://www.youtube.com/watch?v=_MZUw_JEqK0

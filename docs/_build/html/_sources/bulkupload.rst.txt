@@ -18,7 +18,7 @@ Steps for uploading Metadata using Bulk upload
     d. Fill in the excel template.
 
     e. Run the following command on terminal
-    .. code-block:: python
+    .. code-block:: ruby
 
        python3 submission.py -t V2 -x <path to excel file>
 

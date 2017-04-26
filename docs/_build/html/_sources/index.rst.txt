@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 How to submit data to TaRGET DCC
-=========================
+================================
 
 Contents:
 
@@ -14,7 +14,7 @@ Contents:
    intro
    tutorial
    issues
-   bulkupload
+   bulk
 
 
 

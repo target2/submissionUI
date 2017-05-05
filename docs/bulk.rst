@@ -6,7 +6,7 @@ Steps for uploading Metadata using Bulk upload
     b. On terminal - pip3 install xlrd
     c. Download bulk upload script (submission.py) and Excel Template (TaRGET metadata template v2.0.xlsx) from https://github.com/xzhuo/TargetBulkUpload
 
-2.  a. On your first login, you will need to register as a new user (“Create New Account”). After completing all fields, select “Create”, then “Login”.
+2. a. On your first login, you will need to register as a new user (“Create New Account”). After completing all fields, select “Create”, then “Login”.
     b. Click “Show API key” to get your token.
 
     .. image:: _static/tb01.png
@@ -17,13 +17,17 @@ Steps for uploading Metadata using Bulk upload
 
     d. Fill in the excel template.
 
-    https://www.youtube.com/watch?v=_MZUw_JEqK0
 
-3.  Run the following command on terminal
-    .. code-block:: python
+3. Run the following command on terminal
+    ::
 
        python3 submission.py -t V2 -x <path to excel file>
 
-4.  Video tutorial to get started
+4. Video tutorial to get started
 
     .. youtube:: https://www.youtube.com/watch?v=_MZUw_JEqK0
+    .. raw:: html
+
+        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/_MZUw_JEqK0" frameborder="0" allowfullscreen></iframe>
+        </div>

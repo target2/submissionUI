@@ -21,7 +21,7 @@ Steps for uploading Metadata using Bulk upload
 3. Run the following command on terminal
     ::
 
-       python3 submission.py -t V2 -x <path to excel file>
+       python3 submission.py -k <API key> -x <path to excel file>
 
 4. Video tutorial to get started
 

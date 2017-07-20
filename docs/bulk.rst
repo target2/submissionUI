@@ -25,9 +25,16 @@ Steps for uploading Metadata using Bulk upload
 
 4. Video tutorial to get started
 
-    .. youtube:: https://www.youtube.com/watch?v=_MZUw_JEqK0
+    .. youtube:: https://www.youtube.com/watch?v=qDBxSGySTsI
     .. raw:: html
 
         <div style="position: relative; height: 0; overflow: hidden; max-width: 100%; height: auto;">
-            <iframe width="640" height="400" src="https://www.youtube.com/embed/_MZUw_JEqK0" frameborder="0" allowfullscreen></iframe>
+            <iframe width="640" height="400" src="https://www.youtube.com/embed/qDBxSGySTsI" frameborder="0" allowfullscreen></iframe>
+        </div>
+    
+    .. youtube:: https://www.youtube.com/watch?v=233F6YpFfOQ
+    .. raw:: html
+
+        <div style="position: relative; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+            <iframe width="640" height="400" src="https://www.youtube.com/embed/233F6YpFfOQ" frameborder="0" allowfullscreen></iframe>
         </div>

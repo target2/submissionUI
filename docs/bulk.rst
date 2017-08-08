@@ -5,6 +5,7 @@ Steps for uploading metadata using bulk upload
     a. The script requires python3 to be installed. 
     b. Install the python module xlrd ("pip3 install xlrd").
     c. Download the bulk upload script (submission.py) from https://github.com/xzhuo/TargetBulkUpload .
+    d. Alternatively, install the script and dependencies as a pip package ("pip install --user submitTaRGET") and replace "python3 submission.py" with "submitTaRGET".
 
 2. Obtain your API key. 
     a. Log in to the Submission UI (submit.target.wustl.edu). On your first login, you will need to register as a new user (“Create New Account”). After completing all fields, select “Create”, then “Login”.

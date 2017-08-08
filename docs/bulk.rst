@@ -33,7 +33,7 @@ Steps for uploading metadata using bulk upload
     ::
         python3 submission.py -k <API key> -x <excel file> --update
 
-7. Video tutorial to get started
+6. Video tutorial to get started
 
     .. youtube:: https://www.youtube.com/watch?v=qDBxSGySTsI
     .. raw:: html

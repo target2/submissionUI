@@ -11,11 +11,7 @@ Steps for uploading Metadata using Bulk upload
 
     .. image:: _static/tb01.png
 
-    c. Replace 'tokenstring' in Line 9 to your real token string.
-
-    .. image:: _static/tb02.png
-
-    d. Fill in the excel template.
+    c. Fill in the excel template.
 
 
 3. Run the following command on terminal

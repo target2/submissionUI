@@ -31,9 +31,10 @@ Steps for uploading metadata using bulk upload
     a. Click the "Download" button next to the submission on the submission dashboard. This will return the most recent metadata template populated with the submitted metadata, as well as the automatically generated System Accessions for each entry. Note that any changes made to an object between batch submission and re-download will be included. Only metadata submitted via bulk upload are available for batch download.  
     b. After editing, validate and submit the modified sheet using the following command. Note that entries must be deleted through the UI, not by deleting the entry on the template. 
     ::
+    
         python3 submission.py -k <API key> -x <excel file> --update
 
-7. Video tutorial to get started
+6. Video tutorial to get started
 
     .. youtube:: https://www.youtube.com/watch?v=qDBxSGySTsI
     .. raw:: html

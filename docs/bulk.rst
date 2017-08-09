@@ -1,8 +1,8 @@
 Steps for uploading metadata using bulk upload
 ==============================================
 
-1. Install the upload script
-    currently our upload script only works with Python3, please install python3 on your system first. You can also use python3 from Anaconda (https://www.continuum.io/downloads). When you have python3 installed, run following command to install our upload script:
+1. Install the upload script.
+    a. Python3 is required to run the bulk upload script. Please install python3 or use python3 from Anaconda (https://www.continuum.io/downloads). When you have python3 installed, run the following command to install the upload script and its dependencies:
     
     ::
         
@@ -31,13 +31,13 @@ Steps for uploading metadata using bulk upload
     ::
 
        submitTaRGET -k <API key> -x <path to excel file>
-    b. Once all errors have been addressed, run the following command to upload the data to the database. 
+    b. Once all errors have been addressed, run the following command to upload the metadata to the database. 
     ::
 
        submitTaRGET -k <API key> -x <path to excel file> --notest
 
 5. Update previously submitted data. 
-    a. Click the "Download" button next to the submission on the submission dashboard. This will return the most recent metadata template populated with the submitted metadata, as well as the automatically generated System Accessions for each entry. Note that any changes made to an object between batch submission and re-download will be included. Only metadata submitted via bulk upload are available for batch download.  
+    a. Click the "Download" button next to the submission in question on the submission dashboard. This will return the most recent metadata template populated with the submitted metadata, as well as the automatically generated System Accessions for each entry. Note that any changes made to an object between batch submission and re-download will be included. Only metadata submitted via bulk upload are available for batch download.  
     b. After editing, validate and submit the modified sheet using the following command. Note that entries must be deleted through the UI, not by deleting the entry on the template. 
     ::
     

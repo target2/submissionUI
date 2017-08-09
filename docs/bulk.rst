@@ -3,10 +3,12 @@ Steps for uploading metadata using bulk upload
 
 1. Install the upload script
     currently our upload script only works with Python3, please install python3 on your system first. You can also use python3 from Anaconda (https://www.continuum.io/downloads). When you have python3 installed, run following command to install our upload script:
+    
     ::
         pip install --user submitTaRGET
     
     or
+    
     ::
         pip3 install --user submitTaRGET
 

@@ -1,22 +1,16 @@
-TargetBulkUpload
+Bulk upload of metadata to the TaRGET II DCC
 ================
-
-Bulk upload of metadata to TaRGET II DCC
-
 
 Description
 -----------
 
-This script can be used to upload metadata to the TaRGET II DCC metadata
-database from a specific Excel template. You can use it to: 1. Upload
-new metedata to the database; 2. Update existing records in the
-database; 3. Establish relationships between metadata records.
+The following instructions can be used to upload metadata to the TaRGET II DCC metadata database from an Excel template. You can use them to: 1. Upload new metadata to the database; 2. Update existing records in the database; 3. Establish relationships between metadata records.
 
 How to use it
 -------------
 
-Install the upload script.
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+1. Install the upload script.
+
     a. Python3 is required to run the bulk upload script. Please install python3 or use python3 from Anaconda (https://www.continuum.io/downloads). When you have python3 installed, run the following command to install the upload script and its dependencies:
     
     ::
@@ -29,140 +23,74 @@ Install the upload script.
 
         pip3 install --user submitTaRGET
 
-Obtain your API key.
-~~~~~~~~~~~~~~~~~~~~
+2. Obtain your API key.
+
     a. Log in to the Submission UI (submit.target.wustl.edu). On your first login, you will need to register as a new user (“Create New Account”). After completing all fields, select “Create”, then “Login”.
     b. On the homepage, click “Show API key” to get your token.
 
     .. image:: _static/tb01.png
 
-Decide what do you want to do with the "user accession" column in the excel file.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+3. Download and fill in the Excel template (TaRGET_metadata_V<2.0>.xlsx). 
 
-| Before fill in the excel template, you must decide how do you want to
-  use the "user accession" column.
-| User accession can be used as a temporary accession to link different
-  records and establish relationships. In this case, the user accessions
-  you entered in the excel will be removed once your records get their
-  system accessions.
+    a. A blank copy of the most recent template can be downloaded from the TaRGET Submission UI homepage or Bulk Upload page ("Download Bulk Upload Excel template"). You must use our template for bulk upload. 
+    b. If you rename the template, be sure to keep the version number intact in the name. 
+    c. All required fields must be populated. 
+    d. Link metadata entries together by entering User or System Accessions in the blue relationship columns (see below). 
+    e. Enter dates as Excel-formatted dates or a string with format "YYYY-MM-DD".
+    f. Group together technical replicates from a single mouse within an Experiment.
 
-The user accession can also have actural meaning to you and you want to
-save your user accession in our database. In this case, records
-submitted by a same user must have unique user accession. please make
-sure all your records have unique user accessions.
+4. To upload new metadata: 
+    
+    a. Leave the System Accession column blank. If a System Accession is found, the data in that row will not be uploaded. 
+    b. Metadata can be linked to other records already in the metadata database with their System Accession. To establish relationships between records you are uploading at the same time, a User Accession can be used as a temporary placeholder. Please fill in the User Accession according to the format for that tab. All User Accessions must be unique within an Excel file. If a record will not be linked to any other record, it is not necessary to include a User Accession.
 
-Summary: \* Don't use the ``--saveacc`` flag if: \* Your user accession
-in the excel file is temporary; \* You only use user accession to link
-records in the excel file; \* You may have some row without a user
-accession; \* You can make sure every row in the excel file is a new
-record you need to submit to your database.
+    c. To validate the sheet, run the following command on the command line. Contact the DCC if there are errors you cannot resolve.
 
--  Always use the ``--saveacc`` flag if:
+    ::
 
-   -  You need to save user accession information in our database;
-   -  all your records you have submitted, you are submitting, and you
-      are going to submit must have unique user accessions. (all your
-      records in different batches must have unique user accessions!)
+        submitTaRGET -k <API key> -x <path to excel file>
+   
+    d. Once all errors have been addressed, run the following command to upload the metadata to the database.  
 
-If you want to upload new data to the metadata database.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ::
 
-1. Fill in the Excel template accordingly. You must use the template in
-   the repo. Don't rename the template; if you have to rename it, keep
-   the version number intact in the name.
+        submitTaRGET -k <API key> -x <path to excel file> --notest   
+           
+5. To upload new metadata and save User Accessions:
 
-   -  Leave the "System Accession" column blank for the records you want
-      to upload. If a system accession is found in a row, the data in
-      the row will not be uploaded. However, both the "system accession"
-      and the "user accession" in that row now point to the same record
-      in the metadata database, and either one can be used to establish
-      linkage.
+    a. By default, the User Accessions you enter will be removed once your records are uploaded and assigned System Accessions. However, if you would like to retain the User Accessions in the database for record-keeping purposes, you can choose to save them at submission using the ``--saveacc`` flag. 
+    b. If the ``--saveacc`` flag is used, all records must have User Accessions, and User Accessions must be unique across all records submitted by the same user. 
 
-      -  For example, if you have a mouse record in the excel with a
-         system accession "TRGTMSE0001" and a user accession
-         "USRMSE0001", the mouse record itself will not be uploaded.
-         However, If you want to submit a biosample extracted from the
-         mouse, either "TRGTMSE0001" or "USRMSE0001" works if you want
-         to link that biosample record to this mouse.
+    c. If you are using the ``--saveacc`` flag, validate your metadata with:
+   
+    ::
 
-   -  "User Accession" can be used to establish relationships with other
-      records in the same Excel file. Please fill in "User Accession"
-      according to our accession rules (see "Instructions" tab and
-      individual tab headers).
-   -  If you don't use the ``--saveacc`` flag, you can leave "user
-      accession" blank if you don't need to establish any relationship
-      to that record. You can also use "user accession" to link records.
-      But make sure all user accessions must be unique in the excel file
-      and all your rows are new records to the database.
-   -  If you use the ``--saveacc`` flag, you must assign a unique "user
-      accession" to all your records.
-   -  All the dates in the Excel can be a date type in Excel format or a
-      string in format "YYYY-MM-DD". Don't worry if Excel changes the
-      date format automatically (it means Excel knows it is a date).
-   -  The relationship columns are labeled with a different color on the
-      right side in each sheet. It should be either a "User Accession"
-      in the same Excel file or an existing "System Accession" in the
-      database.
+        submitTaRGET -k <API key> -x <excel file> --saveacc
+   
+    d. And submit with: 
+   
+    ::
 
-2. Run it with following command in test mode:
+        submitTaRGET -k <API key> -x <excel file> --saveacc --notest
 
-   ::
+6. To update existing records in the metadata database:
+   
+    a. On the Submission Dashboard, click the "Download" button next to the submission. This will download the most recent metadata template populated with your submitted metadata, as well as the automatically generated System Accessions for each entry. Only metadata submitted via bulk upload are available for batch download.
+    b. Any changes made to an object between batch submission and re-download will be included.  
+    c. To update metadata, the System Accession generated by the database must be present. The User Accession column will be ignored. When updating metadata, only System Accessions may be used to establish relationships.
+    d. Entries cannot be delted by removing the row on the Excel sheet; they must be deleted through the UI.
 
-       submitTaRGET -k <API key> -x <excel file>
+    e. After editing the Excel, validate the modified sheet using the following command. Contact the DCC if there are errors you cannot resolve.
 
-   If you are using the ``--saveacc`` flag:
+    ::
+   
+        submitTaRGET -k <API key> -x <excel file> --update
 
-   ::
+    f. Once all errors have been addressed, run the following command to update the metadata.  
 
-       submitTaRGET -k <API key> -x <excel file> --saveacc
+    ::
 
-3. If there is no error during the test run, you can upload the same
-   Excel file to the production database with the following command
-   (please don't use the following command and contact us if there is
-   any unexpected warning or error):
-
-   ::
-
-       submitTaRGET -k <API key> -x <excel file> --notest
-
-   If you are using the ``--saveacc`` flag:
-
-   ::
-
-       submitTaRGET -k <API key> -x <excel file> --saveacc --notest
-
-If you want to update existing records in the metadata database.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-1. Fill in the Excel template accordingly. You must use the template in
-   the repo. Don't rename the template; if you have to rename it, keep
-   the version number intact in the name.
-
-   -  To update data in the database, fill in all the applicable columns
-      along with the "System Accession" generated by the database.
-   -  All the dates in the Excel can be a date type in Excel format or a
-      string in format "YYYY-MM-DD". Don't worry if Excel changes the
-      date format automatically (it means Excel knows it is a date).
-   -  "user accession" column will be ignored duing update.
-   -  The relationship columns are labeled with a different color on the
-      right side in each sheet. During update, only other record's
-      "System Accession" should be used to establish relationships.
-
-2. Run it with following command in test mode (``--saveacc`` flag does
-   not affect update):
-
-   ::
-
-       submitTaRGET -k <API key> -x <excel file> --update
-
-3. If there is no error during the test run, you can update the same
-   Excel file to the production database with the following command
-   (please don't use the following command and contact us if there is
-   any unexpected warning or error):
-
-   ::
-
-       submitTaRGET -k <API key> -x <excel file> --update --notest
+        submitTaRGET -k <API key> -x <excel file> --update --notest
 
    .. rubric:: A summary flow chart
       :name: a-summary-flow-chart
@@ -171,6 +99,8 @@ If you want to update existing records in the metadata database.
       :alt: submit summary flow chart
 
       Flow chart
+
+See the github repo TargetBulkUpload for more scripts and more information. 
 
 Video tutorial to get started.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

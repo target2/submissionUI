@@ -103,7 +103,7 @@ How to use it
    .. rubric:: A summary flow chart
       :name: a-summary-flow-chart
 
-   .. figure:: https://github.com/xzhuo/TargetBulkUpload/blob/master/bulkupload_flow.20170714.png
+   .. figure:: https://raw.githubusercontent.com/xzhuo/TargetBulkUpload/master/bulkupload_flow.20170714.png
       :alt: submit summary flow chart
 
       Flow chart

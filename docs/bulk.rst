@@ -76,14 +76,6 @@ Bulk upload via the command line
    
         submitTaRGET -k <API key> -x <excel file> --update
 
-   .. rubric:: A summary flow chart
-      :name: a-summary-flow-chart
-
-   .. figure:: https://raw.githubusercontent.com/xzhuo/TargetBulkUpload/master/bulkupload_flow.20170714.png
-      :alt: submit summary flow chart
-
-      Flow chart
-
 Bulk upload via the UI
 ----------------------
 1. Download and fill in the Excel template as above.
@@ -91,15 +83,18 @@ Bulk upload via the UI
 
     .. image:: _static/BulkUploadUI.png
 
-3. Upload your Excel template from your computer ("Choose File").
-4. To upload data for the first time, select the "Validate Sheet" button. To see the results of validation, select "Click here to view results". 
+3. To upload new metadata:
+
+    a. Upload your Excel template from your computer ("Choose File") and select the "Validate Sheet" button. To see the results of validation, select "Click here to view results". 
+    b. If validation is not successful ("Error validating the sheet"), the UI will print a log of warnings and errors that must be corrected before submission. Please correct all errors and re-validate the sheet. 
+    c. If validation is successful ("Validated successfully"), the UI will print instructions and a log of validated metadata. Scroll to the bottom and select the "Submit sheet" button to submit your metadata. You will be asked to confirm this selection before submission. 
     
-    a. If validation is not successful ("Error validating the sheet"), the UI will print a log of warnings and errors that must be corrected before submission. Please correct all errors and re-validate the sheet. 
-    b. If validation is successful ("Validated successfully"), the UI will print instructions and a log of validated metadata. Scroll to the bottom and select the "Submit sheet" button to submit your metadata. You will be asked to confirm this selection before submission. 
+4. To update existing records in the metadata database:
     
-5. To update data, upload the updated Excel template from your computer ("Choose File") and select the "Update Sheet" button. Please correct all errors before submission. 
+    a. Upload the updated Excel template from your computer ("Choose File") and select the "Update Sheet" button. 
+    b. Please correct all errors before submission. 
     
-See the github repo TargetBulkUpload for more scripts and more information. 
+See the github repo TargetBulkUpload for more scripts and information. 
 
 Video tutorial to get started.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

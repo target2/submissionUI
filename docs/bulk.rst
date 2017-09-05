@@ -12,9 +12,7 @@ Download and fill in the Excel template
 
     a. On your first login, you will need to register as a new user (“Create New Account”). After completing all fields, select “Create”, then “Login”.
 
-2. A blank copy of the most recent template (TaRGET_metadata_V<2.0>.xlsx) can be downloaded from the homepage or Bulk Upload page ("Download Bulk Upload Excel template").  
-
-    a. You must use our template for bulk upload. If you rename the template, be sure to keep the version number intact. 
+2. A blank copy of the most recent template (TaRGET_metadata_V<>.xlsx) can be downloaded from the homepage or Bulk Upload page ("Download Bulk Upload Excel template"). You must use the TaRGET template for bulk upload.  
 
     .. image:: _static/TemplateDownload1.png
     

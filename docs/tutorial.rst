@@ -14,8 +14,8 @@ Submitting data to the TaRGET DCC
 
     .. image:: _static/t2.png
 
-    b. The metadata is organized into discrete categories (such as Donor, Assay, Antibody) that are linked together. The entity relationship diagram on the home page displays the relationships between the metadata categories. Some categories will have only one or a few unique instances per lab (e.g., Bioproject), while others (e.g., Donor) will have many. By storing metadata as unique objects, we can avoid entering redundant data (e.g., multiple mice may link to the same Diet and Treatment).
-    c. Fill out metadata for the experiment by clicking on the metadata objects listed under “Other Metadata” (e.g., “Donor” for individual mice, “Assays” for experimental assays performed on nucleic acid obtained from a treated mouse). 
+    b. The metadata is organized into discrete categories (such as Mouse, Assay, Reagent) that are linked together. The entity relationship diagram on the home page displays the relationships between the metadata categories. Some categories will have only one or a few unique instances per lab (e.g., Bioproject), while others (e.g., Mouse) will have many. By storing metadata as unique objects, we can avoid entering redundant data (e.g., multiple mice may link to the same Diet and Treatment).
+    c. Fill out metadata for the experiment by clicking on the metadata objects listed under “Other Metadata” (e.g., “Mouse” for individual mice, “Assays” for experimental assays performed on nucleic acid obtained from a treated mouse). 
 
     .. image:: _static/t3.png
 
@@ -28,7 +28,7 @@ Submitting data to the TaRGET DCC
     .. image:: _static/t5.png
 
     f. To edit a metadata object, alter the relevant fields, and select "Save changes".
-    g. To link a metadata object to another metadata object (e.g., associate a Donor mouse with its Treatment or Diet), select the object from the drop down menu and select "Add". Links can also be deleted without deleting the object (“X”).
+    g. To link a metadata object to another metadata object (e.g., associate a Mouse with its Treatment or Diet), select the object from the drop down menu and select "Add". Links can also be deleted without deleting the object (“X”).
     h. To delete a metadata object, select "Delete _". All links between the object and other objects must be deleted before the object can be deleted.
 
 3. Add a new experiment 

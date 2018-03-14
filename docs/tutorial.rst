@@ -1,78 +1,70 @@
 Submitting data to the TaRGET DCC
 =================================
 
-1. Log in to the Submission Pipeline (http://submit.target.wustl.edu/)
+1. Log in to the Submission Interface (https://submit.targetepigenomics.org)
 
+    .. image:: _static/Login_edit.png
+    
     a. On your first login, you will need to register as a new user (“Create New Account”). After completing all fields, select “Create”, then “Login”. If you have a consortium wiki account, you should use the same username and email for this account.
-    b. The home screen lists your registered Experiments (an organizational unit that allows you to group together related files for upload) and allows creation of new Experiments.
 
-    .. image:: _static/t1.png
+2. Go to your Submission Dashboard (https://submit.targetepigenomics.org/dashboard)
 
-2. Register metadata for the submission 
+    a.	You can get to your Submission Dashboard by selecting the "View my Submission Dashboard" button on your homepage or selecting "My Dashboard" from the banner. 
 
-    a. Before data submission, you must fill out several pieces of information about the experiment from which the files were generated (e.g., how the mouse was treated, how the assay was performed). Click on “Register Metadata” to go to the Accession Registry (http://meta.target.wustl.edu).
+    .. image:: _static/Homepage_edit.png
+
+    b.	From here, you may choose to register metadata or data by selecting the appropriate button. 
+
+3. Create a data submission 
+
+    a. Select the "Data" button on your dashboard. You will be taken to a page (https://submit.targetepigenomics.org/submissions/list) that lists your previous data submissions (if any) and allows you to start a new submission.
+    
+    .. image:: _static/Dashboard_edit.png
+    
+    b. To create a new submission, select "Start new data file submission - SFTP". The Aspera upload option has been deprecated. 
+
+    .. image:: _static/CreateNew_edit.png
+
+    c. Follow the instructions to create a new file submission. To allow automated QC of your uploaded files, you may only include files from one assay (e.g., ATAC-seq, RNA-seq) in a single submission, and they must all be single-end or paired-end. Please also note the new file naming requirements. Submitted files must be in fastq format and unzipped or in .gz zipped format. You must generate an md5sum for each file before registering it, which will be used to ensure that the file was completely uploaded.
+    
+    .. image:: _static/DataInstructions.png   
+    
+    d. After filling in the form, select "Submit" at the bottom of the page. You will taken to detailed instructions for uploading your data via command line SFTP. 
+
+    .. image:: _static/Submit_edit.png
+
+4. View previous data submissions
+
+    a. Registered submissions are listed on your Submission Dashboard by UUID, assay, date submitted, and description. To view files that were uploaded as part of a submission, select the "View Files" button for that the submission. 
+
+    .. image:: _static/PreviouslyRegistered_edit.png
+
+    b. Once files have been uploaded to the DCC server, they will be listed here along with their own UUID and upload date. 
+
+    .. image:: _static/ViewFiles.png
+
+5. Register metadata for a submission 
+
+    a.	To view your data on the Data Portal, you must fill out several pieces of information about how the files were generated (e.g., how the mouse was treated, how the assay was performed). You can register metadata one-by-one via the Accession Registry or in bulk (see https://submissionui.readthedocs.io/en/latest/bulk.html).
+    b.	To register metadata one-by-one, click on “Metadata Registry” on the banner to go to the Accession Registry Portal (https://meta.targetepigenomics.org/).
 
     .. image:: _static/t2.png
 
-    b. The metadata is organized into discrete categories (such as Mouse, Assay, Reagent) that are linked together. The entity relationship diagram on the home page displays the relationships between the metadata categories. Some categories will have only one or a few unique instances per lab (e.g., Bioproject), while others (e.g., Mouse) will have many. By storing metadata as unique objects, we can avoid entering redundant data (e.g., multiple mice may link to the same Diet and Treatment).
-    c. Fill out metadata for the experiment by clicking on the metadata objects listed under “Other Metadata” (e.g., “Mouse” for individual mice, “Assays” for experimental assays performed on nucleic acid obtained from a treated mouse). 
+    c. The metadata is organized into discrete categories (such as Mouse, Assay, Reagent) that are linked together. The entity relationship diagram on the home page displays the relationships between the metadata categories. Some categories will have only one or a few unique instances per lab (e.g., Bioproject), while others (e.g., Mouse) will have many. By storing metadata as unique objects, we can avoid entering redundant data (e.g., multiple mice may link to the same Diet and Treatment).
+    d. Fill out metadata for your files by clicking on “Files”, “Experiments”, and the metadata objects listed under “Other Metadata” (e.g., “Mouse” for individual mice, “Assays” for experimental assays performed on nucleic acid obtained from a mouse). 
 
     .. image:: _static/t3.png
 
-    d. To create a new metadata object, fill out all of the required fields under “Create a new __”. Some fields will include a description or a drop-down menu of available terms. After you submit the object (“Create”), a notification will appear that the object was successfully created, and its randomly generated, permanent accession number will become available in the list of current objects.
+    e. To create a new metadata object, fill out all of the required fields under the “Add new __” button. Some fields will include a description or a drop-down menu of available terms. After you submit the object (“Create”), a notification will appear that the object was successfully created, and its randomly generated, permanent accession number will become available in the list of current objects.
     
     .. image:: _static/t4.png
 
-    e. To view the details of a metadata object, select the accession number for that object. If an object has already been registered, you do not need to register it again; however, you should check to make sure that all of the fields match your submission.
+    f. To view the details of a metadata object, select the accession number for that object. If an object has already been registered, you do not need to register it again; however, you should check to make sure that all of the fields match your submission.
     
     .. image:: _static/t5.png
 
-    f. To edit a metadata object, alter the relevant fields, and select "Save changes".
-    g. To link a metadata object to another metadata object (e.g., associate a Mouse with its Treatment or Diet), select the object from the drop down menu and select "Add". Links can also be deleted without deleting the object (“X”).
-    h. To delete a metadata object, select "Delete _". All links between the object and other objects must be deleted before the object can be deleted.
-
-3. Add a new experiment 
-
-    a. Return to the Submission Interface and select “Add new experiment”. This will take you to the “Experiments” section of the Accession Registry, where you can enter a description for the group of files you are submitting. After filling in the fields, select “Create”. 
-
-    .. image:: _static/t6.png
-
-    .. image:: _static/t7.png
-
-    b. As with other metadata objects, an Experiment can be edited, deleted, or linked to a Bioproject by selecting the accession number of that Experiment. 
-    c. Once created, the Experiment accession will be visible in the list of your current Experiments on the Submission Interface.
-
-4. Register files for submission 
-    
-    a. Return to the Submission Interface (submit.target.wustl.edu/experiments) and select “View Details” for the Experiment for which you are submitting data. This will display a list of files currently associated with the Experiment. Then, select “Register metadata to add new files to this experiment”.
-
-    .. image:: _static/t8.png
-
-    b.  You will be redirected to the “Files” tab in the Accession Registry (meta.target.wustl.edu/files), where you should register metadata for each data file you are submitting. Submitted files must be in fastq format and unzipped or in .gz zipped format. You must generate an md5sum for each file before registering it, which will be used to ensure that the file was completely uploaded.
-    c. After creating the file accession, link it to the relevant Experiment by selecting from the drop-down menu under “Add an experiment associated with this file:”.
-
-    .. image:: _static/t9.png
-    
-    d. Once created and linked to an Experiment, the file will be visible on your Submission Interface in the list of files under the experiment you selected, with Upload Status “not uploaded”.
-
-    .. image:: _static/t10.png
-
-5. Upload data
-
-    a. Select the green button labeled “Upload Data” to upload files via a web interface.
-
-        i. You will be directed to the TaRGET DCC Aspera server. The first time you do this, you will be required to download Aspera to your computer. There is no cost to the user.
-        ii. Create a New Folder whose name is the token generated for your Experiment.
-        iii. Upload files to that Experiment.
-
-    .. image:: _static/t11.png
-
-    b. Alternatively, select “Click here” for instructions on upload via command line.
-    c. After uploading files, refresh the page listing files under your experiment. You should see that the Upload Status has changed to “uploaded”. If the size or md5sum do not match, the Validation Status will be “error”. You must re-upload the file in that case. 
-
-    .. image:: _static/t12.png
-
-    d.  A validation script will be automatically run on the files to ensure that they are in the correct format. If the files pass validation, the Validation Status will read “valid”. If not, it will be “invalid”. In that case, please check to ensure that you have submitting valid fastq files.
+    g. To edit a metadata object, alter the relevant fields, and select "Save changes".
+    h. To link a metadata object to another metadata object (e.g., associate a Mouse with its Treatment or Diet), select the object from the drop down menu and select "Add". Links can also be deleted without deleting the object (“X”).
+    i. To delete a metadata object, select "Delete _". All links between the object and other objects must be deleted before the object can be deleted.
 
 Thank you for using the TaRGET DCC submission pipeline! Please contact us with any questions. 
-

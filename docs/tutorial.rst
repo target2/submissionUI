@@ -27,7 +27,7 @@ Submitting data to the TaRGET DCC
 
     c. Follow the instructions to create a new file submission. To allow automated QC of your uploaded files, you may only include files from one assay (e.g., ATAC-seq, RNA-seq) in a single submission, and they must all be single-end or paired-end. Please also note the new file naming requirements. Submitted files must be in fastq format and unzipped or in .gz zipped format. You must generate an md5sum for each file before registering it, which will be used to ensure that the file was completely uploaded.
     
-    .. image:: _static/DataInstructions.png   
+    .. image:: _static/DataInstructions.PNG   
     
     d. After filling in the form, select "Submit" at the bottom of the page. You will taken to detailed instructions for uploading your data via command line SFTP. 
 
@@ -41,7 +41,7 @@ Submitting data to the TaRGET DCC
 
     b. Once files have been uploaded to the DCC server, they will be listed here along with their own UUID and upload date. 
 
-    .. image:: _static/ViewFiles.png
+    .. image:: _static/ViewFiles.PNG
 
 5. Register metadata for a submission 
 

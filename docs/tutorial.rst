@@ -78,6 +78,9 @@ Metadata submission via the Accession Registry
     .. image:: _static/CreateMouse_edit.png
 
     d. To view the details of a metadata object, select the accession number for that object. If an object has already been registered, you do not need to register it again; however, you should check to make sure that all of the fields match your submission.
+   
+    .. image:: _static/Mice_View.png
+    
     e. To edit a metadata object, alter the relevant fields, and select "Save changes".
     
     .. image:: _static/SaveChanges_edit.png

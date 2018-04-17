@@ -22,7 +22,7 @@ Data submission
 
     a. Select the "Data" button on your dashboard. You will be taken to a page (https://submit.targetepigenomics.org/submissions/list) that lists your previous data submissions (if any) and allows you to start a new submission.
     
-    .. image:: _static/Dashboard_edit.png
+    .. image:: _static/Dashboard_Data.png
     
     b. To create a new submission, select "Start new data file submission - SFTP". The Aspera upload option has been deprecated. 
 
@@ -34,21 +34,23 @@ Data submission
     
     d. After filling in the form, select "Submit" at the bottom of the page. You will be taken to detailed instructions for uploading your data via command line SFTP. 
 
-    .. image:: _static/Submit_edit.png
+    .. image:: _static/SubmitSFTP_edit.png
 
 2. View previous data submissions
 
-    a. Previously registered submissions are listed on your data Submission Dashboard. You may toggle between your submissions and your lab's submissions by selecting the buttons "Show all submissions by my lab"/"Show my submissions". Each submission is assigned a unique UUID and a DCC data wrangler. 
+    a. Previously registered submissions are listed on your data Submission Dashboard. You may toggle between your submissions and your lab's submissions by selecting the buttons "Show all submissions by my lab"/"Show my submissions". 
 
-    .. image:: _static/SubmissionShowLab_edit.png
-    
-    .. image:: _static/SubmissionLab.PNG
+    .. image:: _static/CreateNew_bylab.png
 
-    b. To view files that were uploaded as part of a submission, select the "View Files" button for that submission. Once files have been uploaded to the DCC server, they will be listed here along with their own UUID and upload date. The QC report is linked to each file.
+    b. Each submission is assigned a unique UUID and a DCC data wrangler. 
+
+    .. image:: _static/SubmissionLab_edit.png
+
+    c. To view files that were uploaded as part of a submission, select the "View Files" button for that submission. Once files have been uploaded to the DCC server, they will be listed here along with their own UUID and upload date. The QC report is linked to each file.
 
     .. image:: _static/SubmissionFiles_edit.png
 
-    c. Submissions are not considered complete until metadata has been registered for each file. Selecting the "Upload Metadata" button will take you to instructions for bulk upload of metadata (see below).
+    d. Submissions are not considered complete until metadata has been registered for each file. Selecting the "Upload Metadata" button will take you to instructions for bulk upload of metadata (see below).
 
 Metadata organization
 ---------------------
@@ -56,7 +58,7 @@ For a submission to be marked complete and to be available on the Data Portal, y
 
 The metadata is organized into discrete categories (such as Mouse, Assay, Reagent) that are linked together. The entity relationship diagram on the Accession Registry Portal home page (https://meta.targetepigenomics.org/) displays the relationships between the metadata categories. Some categories will have only one or a few unique instances per lab (e.g., Bioproject), while others (e.g., Mouse) will have many. By storing metadata as unique objects, we can avoid entering redundant data (e.g., multiple mice may link to the same Diet and Treatment).
 
-    .. image:: _static/ERDiagram_edit.png
+    .. image:: _static/ER.PNG
 
 The following instructions can be used to register metadata in the TaRGET II DCC metadata database. You can use them to: 1. Upload new metadata to the database; 2. Update existing records in the database; 3. Establish relationships between metadata records. You can register metadata one-by-one via the Accession Registry or in bulk via the web UI. Bulk upload via the command line can be performed by request.
 
@@ -64,37 +66,45 @@ Metadata submission via the Accession Registry
 ----------------------------------------------
 1. To register metadata one-by-one, go to the Accession Registry Portal (https://meta.targetepigenomics.org/).
    
-    .. image:: _static/MetadataBanner_edit.png
+    .. image:: _static/Dashboard_MR.png
 
     a. Fill out metadata for your files by clicking on “Files” and the metadata objects listed under “Other Metadata” (e.g., “Mouse” for individual mice, “Assays” for experimental assays performed on nucleic acid obtained from a mouse). 
-    b. To create a new metadata object, fill out all of the required fields under the “Add new __” button. Some fields will include a description or a drop-down menu of available terms. After you submit the object (“Create”), a notification will appear that the object was successfully created, and its randomly generated, permanent accession number will become available in the list of current objects.
+   
+    .. image:: _static/Mice_Add.png
     
-    .. image:: _static/Mice.PNG
-    
+    b. To create a new metadata object, fill out all of the required fields under the “Add new __” button. 
+    c. Some fields will include a description or a drop-down menu of available terms. After you submit the object (“Create”), a notification will appear that the object was successfully created, and its randomly generated, permanent accession number will become available in the list of current objects.
+
     .. image:: _static/CreateMouse_edit.png
 
-    c. To view the details of a metadata object, select the accession number for that object. If an object has already been registered, you do not need to register it again; however, you should check to make sure that all of the fields match your submission.
-    d. To edit a metadata object, alter the relevant fields, and select "Save changes".
+    d. To view the details of a metadata object, select the accession number for that object. If an object has already been registered, you do not need to register it again; however, you should check to make sure that all of the fields match your submission.
+    e. To edit a metadata object, alter the relevant fields, and select "Save changes".
     
     .. image:: _static/SaveChanges_edit.png
 
-    e. To link a metadata object to another metadata object (e.g., associate a Mouse with its Treatment or Diet), select the object from the drop down menu and select "Add". Links can also be deleted without deleting the object (“X”).
+    f. To link a metadata object to another metadata object (e.g., associate a Mouse with its Treatment or Diet), select the object from the drop down menu and select "Add". Links can also be deleted without deleting the object (“X”).
     
     .. image:: _static/Links_edit.png
 
-    f. To delete a metadata object, select "Delete _". All links between the object and other objects must be deleted before the object can  be deleted.
+    g. To delete a metadata object, select "Delete _". All links between the object and other objects must be deleted before the object can  be deleted.
     
     .. image:: _static/DeleteMouse_edit.png
 
 Metadata bulk submission via the web UI
 ---------------------------------------
 1. To register metadata in bulk, on your Submission Dashboard (https://submit.targetepigenomics.org/dashboard), select "Metadata" to go to your metadata submission dashboard. This interface lists all of your previous bulk metadata submissions. 
+    
+    .. image:: _static/Dashboard_Metadata.png
+    
 2. Select "Create/Update bulk metadata submission" to access the web UI for bulk upload of metadata (https://submit.targetepigenomics.org/submission/upload). 
+    
+    .. image:: _static/MetadataSubmission_create.png
+    
 3. To upload new metadata, download a blank copy of the most recent metadata template (TaRGET_metadata_V<>.xlsx) by selecting "Download Bulk Upload Excel template". 
 
     a. You must use the TaRGET template for bulk upload. You should maintain the version number in the name.  
 
-    .. image:: _static/TemplateDownload2.png
+    .. image:: _static/BlankTemplate_edit.png
 
 4. Fill out the Excel template.
     
@@ -116,7 +126,7 @@ Metadata bulk submission via the web UI
     
     a. On your metadata submission dashboard, select "Download All of My Metadata". This will download the most recent metadata template populated with all of your submitted metadata, as well as the automatically generated System Accessions for each entry. Any changes made to an object between submission and re-download will be included.
 
-    .. image:: _static/SubmissionDownload.png
+    .. image:: _static/MetadataSubmission_edit.png
 
     b. Update the records as needed. Deleting individual fields for an entry will erase those fields in the database. Entries cannot be deleted by removing the row on the Excel sheet; they must be deleted through the UI. 
     c. Either the System or User Accession may be used to update an existing record. 

@@ -29,19 +29,23 @@ Submitting data to the TaRGET DCC
     
     .. image:: _static/DataInstructions.PNG   
     
-    d. After filling in the form, select "Submit" at the bottom of the page. You will taken to detailed instructions for uploading your data via command line SFTP. 
+    d. After filling in the form, select "Submit" at the bottom of the page. You will be taken to detailed instructions for uploading your data via command line SFTP. 
 
     .. image:: _static/Submit_edit.png
 
 4. View previous data submissions
 
-    a. Registered submissions are listed on your Submission Dashboard by UUID, assay, date submitted, and description. To view files that were uploaded as part of a submission, select the "View Files" button for that the submission. 
+    a. Previously registered submissions are listed on your data Submission Dashboard. You may toggle between your submissions and your lab's submissions by selecting the buttons "Show all submissions by my lab"/"Show my submissions". Each submission is assigned a unique UUID and a DCC data wrangler. 
 
-    .. image:: _static/PreviouslyRegistered_edit.png
+    .. image:: _static/SubmissionShowLab_edit.png
+    
+    .. image:: _static/SubmissionLab.PNG
 
-    b. Once files have been uploaded to the DCC server, they will be listed here along with their own UUID and upload date. 
+    b. To view files that were uploaded as part of a submission, select the "View Files" button for that submission. Once files have been uploaded to the DCC server, they will be listed here along with their own UUID and upload date. The QC report is linked to each file.
 
-    .. image:: _static/ViewFiles.PNG
+    .. image:: _static/SubmissionFiles_edit.png
+
+    c. Submissions are not considered complete until metadata has been registered for each file. To register metadata, select the "Upload Metadata" button, which will take you to instructions for bulk upload of metadata.
 
 5. Register metadata for a submission 
 
@@ -54,10 +58,10 @@ Submitting data to the TaRGET DCC
 
     .. image:: _static/ERDiagram_edit.png
 
-    d. Fill out metadata for your files by clicking on “Files”, “Experiments”, and the metadata objects listed under “Other Metadata” (e.g., “Mouse” for individual mice, “Assays” for experimental assays performed on nucleic acid obtained from a mouse). 
+    d. Fill out metadata for your files by clicking on “Files” and the metadata objects listed under “Other Metadata” (e.g., “Mouse” for individual mice, “Assays” for experimental assays performed on nucleic acid obtained from a mouse). 
     e. To create a new metadata object, fill out all of the required fields under the “Add new __” button. Some fields will include a description or a drop-down menu of available terms. After you submit the object (“Create”), a notification will appear that the object was successfully created, and its randomly generated, permanent accession number will become available in the list of current objects.
     
-    .. image:: _static/AddNew_edit.png
+    .. image:: _static/Mice.PNG
     
     .. image:: _static/CreateMouse_edit.png
 

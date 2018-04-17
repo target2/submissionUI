@@ -14,7 +14,6 @@ Contents:
    intro
    tutorial
    issues
-   bulk
 
 
 

@@ -18,7 +18,7 @@ Submitting data and metadata to the TaRGET II DCC
 Data submission
 ---------------
 
-3. Create a data submission 
+1. Create a data submission 
 
     a. Select the "Data" button on your dashboard. You will be taken to a page (https://submit.targetepigenomics.org/submissions/list) that lists your previous data submissions (if any) and allows you to start a new submission.
     
@@ -36,7 +36,7 @@ Data submission
 
     .. image:: _static/Submit_edit.png
 
-4. View previous data submissions
+2. View previous data submissions
 
     a. Previously registered submissions are listed on your data Submission Dashboard. You may toggle between your submissions and your lab's submissions by selecting the buttons "Show all submissions by my lab"/"Show my submissions". Each submission is assigned a unique UUID and a DCC data wrangler. 
 
@@ -64,7 +64,7 @@ Metadata submission via the Accession Registry
 ----------------------------------------------
 1. To register metadata one-by-one, go to the Accession Registry Portal (https://meta.targetepigenomics.org/).
    
-   .. image:: _static/MetadataBanner_edit.png
+    .. image:: _static/MetadataBanner_edit.png
 
     a. Fill out metadata for your files by clicking on “Files” and the metadata objects listed under “Other Metadata” (e.g., “Mouse” for individual mice, “Assays” for experimental assays performed on nucleic acid obtained from a mouse). 
     b. To create a new metadata object, fill out all of the required fields under the “Add new __” button. Some fields will include a description or a drop-down menu of available terms. After you submit the object (“Create”), a notification will appear that the object was successfully created, and its randomly generated, permanent accession number will become available in the list of current objects.
@@ -121,6 +121,6 @@ Metadata bulk submission via the web UI
     b. Update the records as needed. Deleting individual fields for an entry will erase those fields in the database. Entries cannot be deleted by removing the row on the Excel sheet; they must be deleted through the UI. 
     c. Either the System or User Accession may be used to update an existing record. 
     d. On the bulk upload web UI (https://submit.targetepigenomics.org/submission/upload), upload the updated Excel template from your computer ("Choose File") and select the "Update Sheet" button. 
-    b. Please correct all errors before submission. 
+    e. Please correct all errors before submission. 
     
 Thank you for using the TaRGET DCC submission pipeline! Please contact us with any questions. 

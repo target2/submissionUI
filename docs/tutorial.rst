@@ -122,8 +122,7 @@ Metadata bulk submission via the web UI
 
     .. image:: _static/BulkUploadUI.png
 
-    b. If validation is not successful ("Error validating the sheet"), the UI will print a log of errors that must be corrected before submission. Please correct all errors and re-validate the sheet. 
-    c. If validation is successful ("Validated successfully"), the UI will print instructions and a log of validated metadata. Scroll to the bottom and select the "Submit sheet" button to submit your metadata. You will be asked to confirm this selection before submission. 
+    b. If validation is not successful, the UI will print a log of errors that must be corrected before submission. Please correct all errors and re-validate the sheet. If validation is successful, the UI will print instructions and a log of validated metadata. Scroll to the bottom and select the "Submit sheet" button to submit your metadata. You will be asked to confirm this selection before submission. 
     
 6. To update existing records in the metadata database:
     

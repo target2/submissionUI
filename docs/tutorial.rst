@@ -51,9 +51,7 @@ Data submission
     .. image:: _static/Data_1e3.PNG
     
     h. The final page provides detailed instructions for uploading your data via command line SFTP. Please note that for production data, you must still provide metadata (see below). 
-    
-    .. image:: _static/Data_1f.PNG
-    
+
 2. View previous data submissions
 
     a. Previously registered submissions are listed on your data Submission Dashboard. You may toggle between your submissions and your lab's submissions by selecting the buttons "Show all submissions by my lab"/"Show my submissions". 

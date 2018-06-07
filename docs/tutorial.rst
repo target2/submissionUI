@@ -28,14 +28,32 @@ Data submission
 
     .. image:: _static/CreateNew_edit.png
 
-    c. Follow the instructions to create a new file submission. To allow automated QC of your uploaded files, you may only include files from one assay (e.g., ATAC-seq, RNA-seq) in a single submission, and they must all be single-end or paired-end. Please also note the new file naming requirements. Submitted files must be in fastq format and unzipped or in .gz zipped format. You must generate an md5sum for each file before registering it, which will be used to ensure that the file was completely uploaded.
+    c. Specify your lab and username and other basic information for your submission. You may only include files from one assay (e.g., ATAC-seq, RNA-seq) in a single submission, and they must all be single-end or paired-end. Select "Submit".
     
-    .. image:: _static/DataInstructions.PNG   
+    .. image:: _static/Data_1c1.PNG 
+ 
+    d. Review your entries and either confirm that they are correct ("Yes") or return to the form to make changes ("No").
     
-    d. After filling in the form, select "Submit" at the bottom of the page. You will be taken to detailed instructions for uploading your data via command line SFTP. 
+    .. image:: _static/Data_1c12.PNG
+    
+    e. Next, follow the instructions to generate an md5sum list for your files, which will be used to ensure that the files were completely uploaded. Please also note the new file naming requirements. Submitted files must be in fastq or fastq.gz format. After pasting the md5sum list in the window, select "Submit" at the bottom of the page. An error will be returned if the naming convention has not been followed or the number of rows in the md5sum list does not match the number of files specified on the previous page. 
 
-    .. image:: _static/SubmitSFTP_edit.png
-
+    .. image:: _static/Data_1c2.PNG
+    
+    f. For pilot data, you will fill out a limited set of metadata fields during data submission. To fill out metadata, select files in the left pane, then select the relevant metadata for those files in the right pane and hit "Save". On the review panel, select "Yes" if the metadata is correct. Repeat for all files. Files will be removed from the list once metadata has been registered for them, but you will have the chance to correct all metadata in the next step.
+    
+    .. image:: _static/Data_1e.PNG
+    
+    .. image:: _static/Data_1e2.PNG
+    
+    g.  Select "Review", edit the table of metadata for each file as needed, and select "Finish". 
+    
+    .. image:: _static/Data_1e3.PNG
+    
+    h. The final page provides detailed instructions for uploading your data via command line SFTP. Please note that for production data, you must still provide metadata (see below). 
+    
+    .. image:: _static/Data_1f.PNG
+    
 2. View previous data submissions
 
     a. Previously registered submissions are listed on your data Submission Dashboard. You may toggle between your submissions and your lab's submissions by selecting the buttons "Show all submissions by my lab"/"Show my submissions". 
@@ -54,7 +72,7 @@ Data submission
 
 Metadata organization
 ---------------------
-For a submission to be marked complete and to be available on the Data Portal, you must fill out several pieces of information about how the files were generated (e.g., how the mouse was treated, how the assay was performed).  
+For a submission to be marked complete and to be available on the Data Portal, you must fill out several pieces of information about how the files were generated (e.g., how the mouse was treated, how the assay was performed). For production data, complete metadata constitutes all required fields and relationships.  
 
 The metadata is organized into discrete categories (such as Mouse, Assay, Reagent) that are linked together. The entity relationship diagram on the Accession Registry Portal home page (https://meta.targetepigenomics.org/) displays the relationships between the metadata categories. Some categories will have only one or a few unique instances per lab (e.g., Bioproject), while others (e.g., Mouse) will have many. By storing metadata as unique objects, we can avoid entering redundant data (e.g., multiple mice may link to the same Diet and Treatment).
 

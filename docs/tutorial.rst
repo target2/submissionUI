@@ -30,7 +30,7 @@ Data submission
 
     c. Specify your lab and username and other basic information for your submission. You may only include files from one assay (e.g., ATAC-seq, RNA-seq) in a single submission, and they must all be single-end or paired-end. Select "Submit".
     
-    .. image:: _static/Data_1c1.PNG 
+    .. image:: _static/NewSubmissio.PNG 
  
     d. Review your entries and either confirm that they are correct ("Yes") or return to the form to make changes ("No").
     
@@ -58,15 +58,23 @@ Data submission
 
     .. image:: _static/CreateNew_bylab.png
 
-    b. Each submission is assigned a unique UUID and a DCC data wrangler. 
+    b. Each submission is assigned a unique UUID and a DCC data wrangler. The data wrangler is your primary point of contact for the submission.
 
-    .. image:: _static/SubmissionLab_edit.png
+    .. image:: _static/SubmissionDashboard_edit.png
 
-    c. To view files that were uploaded as part of a submission, select the "View Files" button for that submission. Once files have been uploaded to the DCC server, they will be listed here along with their own UUID and upload date. The QC report is linked to each file.
+    c. The md5sum status column shows the results of initial validation performed on your uploaded files. If the number, name, or md5sum of the uploaded files does not match those registered, the status will be a red X and the submission must be corrected before proceeding. To view files that were uploaded as part of a submission, select the "View Files" button. Once files have been uploaded to the DCC server, they will be listed here along with their own UUID and upload date.
+    
+    d. Submissions are not considered complete until metadata has been registered for each file. You can view a report showing the level of completeness of each metadata object attached to each file in the submission by selecting the "Metadata Status" button. Selecting the "Upload Metadata" button will take you to instructions for bulk upload of production metadata (see below).
 
-    .. image:: _static/SubmissionFiles_edit.png
+    .. image:: _static/MetadataStatus.PNG
 
-    d. Submissions are not considered complete until metadata has been registered for each file. Selecting the "Upload Metadata" button will take you to instructions for bulk upload of metadata (see below).
+    e. Pilot metadata can be updated using the "Update experiment design" button on the submission dashboard - NOT through the Accession Registry.
+    
+    f. Once the submission metadata is complete, your data wrangler will sign off on your submission, and the "Status" column will have a green check. Then, the QC pipeline will be run on the submission, and a QC report will be linked to each file under "View Files".
+
+    .. image:: _static/FileList.PNG
+
+    
 
 Metadata organization
 ---------------------
@@ -76,7 +84,7 @@ The metadata is organized into discrete categories (such as Mouse, Assay, Reagen
 
     .. image:: _static/ER.PNG
 
-The following instructions can be used to register metadata in the TaRGET II DCC metadata database. You can use them to: 1. Upload new metadata to the database; 2. Update existing records in the database; 3. Establish relationships between metadata records. You can register metadata one-by-one via the Accession Registry or in bulk via the web UI. Bulk upload via the command line can be performed by request.
+The following instructions can be used to register production metadata in the TaRGET II DCC metadata database. You can use them to: 1. Upload new metadata to the database; 2. Update existing records in the database; 3. Establish relationships between metadata records. You can register metadata one-by-one via the Accession Registry or in bulk via the web UI. Bulk upload via the command line can be performed by request. Please note that pilot metadata should be updated only through the "Update experiment design" button on the submission dashboard.
 
 Metadata submission via the Accession Registry
 ----------------------------------------------

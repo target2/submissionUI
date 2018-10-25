@@ -36,7 +36,7 @@ Data submission
     
     .. image:: _static/Data_1c12.PNG
     
-    e. Next, follow the instructions to generate an md5sum list for your files, which will be used to ensure that the files were completely uploaded. Please also note the new file naming requirements. Submitted files must be in fastq or fastq.gz format. After pasting the md5sum list in the window, select "Submit" at the bottom of the page. An error will be returned if the naming convention has not been followed or the number of rows in the md5sum list does not match the number of files specified on the previous page. 
+    e. Next, follow the instructions to generate an md5sum list for your files, which will be used to ensure that the files were completely uploaded. '''Please also note the new file naming requirements.''' Submitted files must be in fastq or fastq.gz format. After pasting the md5sum list in the window, select "Submit" at the bottom of the page. An error will be returned if the naming convention has not been followed or the number of rows in the md5sum list does not match the number of files specified on the previous page. 
 
     .. image:: _static/Data_1c2.PNG
     
@@ -80,11 +80,11 @@ Metadata organization
 ---------------------
 For a submission to be marked complete and to be available on the Data Portal, you must fill out several pieces of information about how the files were generated (e.g., how the mouse was treated, how the assay was performed). For production data, complete metadata constitutes all required fields and relationships.  
 
-The metadata is organized into discrete categories (such as Mouse, Assay, Reagent) that are linked together. The entity relationship diagram on the Accession Registry Portal home page (https://meta.targetepigenomics.org/) displays the relationships between the metadata categories. Some categories will have only one or a few unique instances per lab (e.g., Bioproject), while others (e.g., Mouse) will have many. By storing metadata as unique objects, we can avoid entering redundant data (e.g., multiple mice may link to the same Diet and Treatment).
+The metadata is organized into discrete categories (such as Mouse, Assay, Reagent) that are linked together. The entity relationship diagram on the Accession Registry Portal home page (https://meta.targetepigenomics.org/) displays the relationships between the metadata categories. Some categories will have only one or a few unique instances per lab (e.g., Bioproject), while others (e.g., "Mouse" for individual mice, "Assay" for experimental assays performed on tissue obtained from a mouse) will have many. By storing metadata as unique objects, we can avoid entering redundant data (e.g., multiple mice may link to the same Diet and Treatment).
 
     .. image:: _static/ER.PNG
 
-The following instructions can be used to register production metadata in the TaRGET II DCC metadata database. You can use them to: 1. Upload new metadata to the database; 2. Update existing records in the database; 3. Establish relationships between metadata records. You can register metadata one-by-one via the Accession Registry or in bulk via the web UI. Bulk upload via the command line can be performed by request. Please note that pilot metadata should be updated only through the "Update experiment design" button on the submission dashboard.
+The following instructions can be used to register production metadata in the TaRGET II DCC metadata database. You can use them to: 1. Upload new metadata to the database; 2. Update existing records in the database; 3. Establish relationships between metadata records. You can register metadata one-by-one via the Accession Registry (for Lab, Bioproject, Diet, Treatment, and Reagent) or in bulk via the web UI (for Litter, Mouse, Biosample, Assay, and File). Bulk upload via the command line can be performed by request. Please note that pilot metadata should be updated only through the "Update experiment design" button on the submission dashboard.
 
 Metadata submission via the Accession Registry
 ----------------------------------------------
@@ -92,7 +92,7 @@ Metadata submission via the Accession Registry
    
     .. image:: _static/Dashboard_MR.png
 
-    a. Fill out metadata for your files by clicking on “Files” and the metadata objects listed under “Other Metadata” (e.g., “Mouse” for individual mice, “Assays” for experimental assays performed on nucleic acid obtained from a mouse). 
+    a. Fill out metadata for your samples by clicking on the metadata objects listed under “Other Metadata”. 
    
     .. image:: _static/Mice_Add.png
     
@@ -101,7 +101,7 @@ Metadata submission via the Accession Registry
 
     .. image:: _static/CreateMouse_edit.png
 
-    d. To view the details of a metadata object, select the accession number for that object. If an object has already been registered, you do not need to register it again; however, you should check to make sure that all of the fields match your submission.
+    d. To view the details of a metadata object, select the accession number for that object. If an object has already been registered, you should not need to register it again when you submit new metadata; however, you should check to make sure that all of the fields match your requirements.
    
     .. image:: _static/Mice_View.png
     
@@ -109,7 +109,7 @@ Metadata submission via the Accession Registry
     
     .. image:: _static/SaveChanges_edit.png
 
-    f. To link a metadata object to another metadata object (e.g., associate a Mouse with its Treatment or Diet), select the object from the drop down menu and select "Add". Links can also be deleted without deleting the object (“X”).
+    f. To link a metadata object to another metadata object (e.g., associate a Bioproject with its Lab), select the object from the drop down menu and select "Add". Links can also be deleted without deleting the object (“X”).
     
     .. image:: _static/Links_edit.png
 
@@ -119,44 +119,20 @@ Metadata submission via the Accession Registry
 
 Metadata bulk submission via the web UI
 ---------------------------------------
-1. To register metadata in bulk, on your Submission Dashboard (https://submit.targetepigenomics.org/dashboard), select "Metadata" to go to your metadata submission dashboard. This interface lists all of your previous bulk metadata submissions. 
+1. To register metadata in bulk, on your Submission Dashboard (https://submit.targetepigenomics.org/dashboard), select "Metadata" to go to your metadata submission dashboard.  
     
     .. image:: _static/Dashboard_Metadata.png
     
-2. Select "Create/Update bulk metadata submission" to access the web UI for bulk upload of metadata (https://submit.targetepigenomics.org/submission/upload). 
+2. Select "Create/Update bulk metadata submission" to access the web UI for bulk upload of metadata. 
     
     .. image:: _static/MetadataSubmission_create.png
     
-3. To upload new metadata, download a blank copy of the most recent metadata template (TaRGET_metadata_V<>.xlsx) by selecting "Download Bulk Upload Excel template". 
+3. Login and follow the tutorial available on this site to download a new blank template or re-download previously submitted metadata into the most recent metadata version. 
 
-    a. You must use the TaRGET template for bulk upload. You should maintain the version number in the name.  
-
-    .. image:: _static/BlankTemplate_edit.png
-
-4. Fill out the Excel template.
+4. Instructions for filling out the Excel template:
     
-    a. All required fields must be populated. 
-    b. Enter dates as Excel-formatted dates or a string with format "YYYY-MM-DD".
-    c. Link metadata entries together by entering User or System Accessions in the blue relationship columns. To establish relationships between records you are uploading at the same time, a user-provided User Accession can be used as a temporary placeholder. To eliminate potential record duplications, we now require the user to provide a unique User Accession for each record in the database (i.e., User Accessions must be unique across all submissions for a single user). Please fill in the User Accession according to the format for that tab. Metadata can be linked to other records already in the metadata database with their System or User Accession.
-    d. If a System Accession is present in the row or the User Accession for a record already exists in the database, that record will be skipped and not uploaded.
-    
-5. To upload new metadata:
-
-    a. Upload your Excel template from your computer ("Choose File") and select the "Validate Sheet" button. To see the results of validation, select "Click here for next step". 
-
-    .. image:: _static/BulkUploadUI.png
-
-    b. If validation is not successful, the UI will print a log of errors that must be corrected before submission. Please correct all errors and re-validate the sheet. If validation is successful, the UI will print instructions and a log of validated metadata. Scroll to the bottom and select the "Submit sheet" button to submit your metadata. You will be asked to confirm this selection before submission. 
-    
-6. To update existing records in the metadata database:
-    
-    a. On your metadata submission dashboard, select "Download All of My Metadata". This will download the most recent metadata template populated with all of your submitted metadata, as well as the automatically generated System Accessions for each entry. Any changes made to an object between submission and re-download will be included.
-
-    .. image:: _static/MetadataSubmission_edit.png
-
-    b. Update the records as needed. Deleting individual fields for an entry will erase those fields in the database. Entries cannot be deleted by removing the row on the Excel sheet; they must be deleted through the UI. 
-    c. Either the System or User Accession may be used to update an existing record. 
-    d. On the bulk upload web UI (https://submit.targetepigenomics.org/submission/upload), upload the updated Excel template from your computer ("Choose File") and select the "Update Sheet" button. 
-    e. Please correct all errors before submission. 
+    a. All required fields (red headers) and relationships (blue headers) must be populated. 
+    b. Enter dates as a string with format "YYYY-MM-DD".
+    c. Link metadata entries together by entering the relevant System Accession in the blue/teal relationship columns. Metadata can be linked to other records already in the metadata database using their System Accession.
     
 Thank you for using the TaRGET DCC submission pipeline! Please contact us with any questions. 

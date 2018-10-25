@@ -36,7 +36,7 @@ Data submission
     
     .. image:: _static/Data_1c12.PNG
     
-    e. Next, follow the instructions to generate an md5sum list for your files, which will be used to ensure that the files were completely uploaded. '''Please also note the new file naming requirements.''' Submitted files must be in fastq or fastq.gz format. After pasting the md5sum list in the window, select "Submit" at the bottom of the page. An error will be returned if the naming convention has not been followed or the number of rows in the md5sum list does not match the number of files specified on the previous page. 
+    e. Next, follow the instructions to generate an md5sum list for your files, which will be used to ensure that the files were completely uploaded. **Please also note the new file naming requirements.** Submitted files must be in fastq or fastq.gz format. After pasting the md5sum list in the window, select "Submit" at the bottom of the page. An error will be returned if the naming convention has not been followed or the number of rows in the md5sum list does not match the number of files specified on the previous page. 
 
     .. image:: _static/Data_1c2.PNG
     
@@ -132,7 +132,11 @@ Metadata bulk submission via the web UI
 4. Instructions for filling out the Excel template:
     
     a. All required fields (red headers) and relationships (blue headers) must be populated. 
-    b. Enter dates as a string with format "YYYY-MM-DD".
+    b. Many fields are restricted to a list of pre-determined values available in a drop-down menu. To add additional values to the list, contact the Metadata WG. 
     c. Link metadata entries together by entering the relevant System Accession in the blue/teal relationship columns. Metadata can be linked to other records already in the metadata database using their System Accession.
-    
+    d. Enter dates as a string with format "YYYY-MM-DD". 
+    e. All mouse ages should be specified in weeks.
+    f. Please use the following missing data fields: Text, "NA"; Number, "999999999"; Date, "1970-01-01"
+    g. All protocol fields should be linked to finalized protocols that are available on the wiki or the metadata registry, including lab-specific protocols.
+ 
 Thank you for using the TaRGET DCC submission pipeline! Please contact us with any questions. 
